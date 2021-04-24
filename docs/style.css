@@ -1,0 +1,10 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+div.point{
+    padding: 0px  100px 20px  100px;
+    font-size: larger;
+}
+div.jumbotron{
+    margin: 0px !important;
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrosmart</title>
+    <link rel="icon" href="docs/favicon.svg">
+    <link rel="stylesheet" href="docs/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mb-0 h1" href="#">AgroSmart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="https://adityainfinite.github.io">Home</a>
+                <a class="nav-item nav-link" href="https://adityainfinite.github.io/projects/">Projects</a>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">AgroSmart</h1>
+            <p class="lead">An Automatic Fertilizing & Data Logging System</p>
+        </div>
+    </div>
+    <div class="alert alert-primary" role="alert">
+        <div class="container">
+            <a href="https://docs.google.com/document/d/1bAe-KEHbb0lvszVdnFWmgoY1UizvlsOIOMb-iF07-3s/edit?usp=sharing">Google docs file <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="bi bi-file-code"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></a>
+        </div>
+      </div>
+    <div class="point theissue">
+        <h2>The issue I tried to solve</h1>
+            <p>
+                Excessive use of chemical fertilizers is a very serious problem in agriculture at present. Excessive use
+                of
+                chemical fertilizer not only leads to soil compaction, aggravating acidification, and because the
+                fertilizer
+                utilization rate is extremely low, serious waste and pollution of groundwater occurs.</p>
+    </div>
+    <div class="point solution">
+        <h2>The Solution</h2>
+        <p>
+            The model uses data collected from sensors placed in the soil to find the amount of fertilizers or water in
+            the
+            soil. This number is then used to calculate the amount of fertilizer or water needed by the crops. this
+            number
+            is then used to calculate the duration for which the pumps should be turned on.
+            <br> Also the amount offertilizer or water in the soil is logged in an sd card. This data can be used for
+            analiysing the relation offertilizer amount and crop productivity to get best results from the farm
+            <br>Sensors for fertilizers were not available when I was making the model so I had to use soil moisture
+            sensors, The switch to NPK sensors will not require any change in hardware and very little change in the
+            code
+        </p>
+    </div>
+    <div class="making jumbotron jumbotron-fluid">
+        <div class="container">
+            <h2>The making</h2>
+            <p>
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                        aria-controls="nav-home" aria-selected="true">Home</a>
+                    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                        aria-controls="nav-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-code" viewBox="0 0 16 16">
+                            <path d="M6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z"/>
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
+                          </svg>Code</a>
+                    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                        aria-controls="nav-contact" aria-selected="false">Schematics</a>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <p style="padding-top: 10px;">The Arduino (micro-controller) is the brain of the operation. Two
+                        cheap soil moisture sensors were used, the send an analog signal to the arduino. I upgraded from
+                        MOSFETs to relays for increased reliability and the ability to handle bigger pumps.I added an
+                        sd-card mosule to the project, this addition bring a whole new set of advantages with it as
+                        before the unit could not record or store the data somewhere because of the absense of
+                        sufficient permanant memory. The data collected can be used for scientific monitoring of the
+                        feild</p>
+                        <img style="height: 400px;" src="docs/images/image3.jpg" alt="">
+                        Me holding the initial prototype of AgroSmart
+                        <br>    <br>
+                        <img style="height: 400px;" src="docs/images/image4.jpg" alt="">
+                        charts explaining Agrosmart
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <a href="./code.html" target="_blank">open in new tab
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="bi bi-file-code"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    </a>
+                    <pre>
+    <font color="#95a5a6">&#47;*</font>
+    <font color="#95a5a6">Author: Aditya Dalvi</font>
+    <font color="#95a5a6">Date:24&#47;2&#47;2021</font>
+    <font color="#95a5a6">Name: code.ino</font>
+    <font color="#95a5a6">Project: Agrosmart</font>
+    <font color="#95a5a6">*&#47;</font>
+                    
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><font color="#d35400">Wire</font><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">DS3231</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">SPI</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+    <font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">SD</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
+                    
+    <b><font color="#d35400">DS3231</font></b> <font color="#000000">rtc</font><font color="#000000">(</font><font color="#00979c">SDA</font><font color="#434f54">,</font> <font color="#00979c">SCL</font><font color="#000000">)</font><font color="#000000">;</font>
+                    
+    <font color="#00979c">int</font> <font color="#000000">val0</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">val1</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">avg</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font>
+    <b><font color="#d35400">Time</font></b> <font color="#000000">t</font><font color="#000000">;</font>
+                    
+    <font color="#00979c">const</font> <font color="#00979c">int</font> <font color="#000000">ledPin</font> <font color="#434f54">=</font> <font color="#000000">2</font><font color="#000000">;</font>
+    <font color="#00979c">int</font> <font color="#000000">ledState</font> <font color="#434f54">=</font> <font color="#00979c">LOW</font><font color="#000000">;</font>
+    <font color="#00979c">unsigned</font> <font color="#00979c">long</font> <font color="#000000">previousMillis</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font>
+    <font color="#00979c">bool</font> <font color="#000000">SDInit</font> <font color="#434f54">=</font> <font color="#00979c">true</font><font color="#000000">;</font>
+    <font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">2000</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">9600</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#d35400">pinMode</font><font color="#000000">(</font><font color="#000000">3</font><font color="#434f54">,</font> <font color="#00979c">OUTPUT</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">3</font><font color="#434f54">,</font> <font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;Setup finished&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34;Initializing SD card...&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#434f54">!</font><b><font color="#d35400">SD</font></b><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">4</font><font color="#000000">)</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;initialization failed!&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">SDInit</font> <font color="#434f54">=</font> <font color="#00979c">false</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font><font color="#5e6d03">else</font><font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;initialization done.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font>
+    &nbsp;<font color="#d35400">File</font> <font color="#000000">dataFile</font> <font color="#434f54">=</font> <b><font color="#d35400">SD</font></b><font color="#434f54">.</font><font color="#d35400">open</font><font color="#000000">(</font><font color="#005c5f">&#34;datalog.txt&#34;</font><font color="#434f54">,</font> <font color="#00979c">FILE_WRITE</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">dataFile</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; v2 start: &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getDateStr</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getTimeStr</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">close</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;written&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font> <font color="#5e6d03">else</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;error opening datalog.txt&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font>
+    <font color="#000000">}</font>
+                    
+    <font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;<font color="#000000">t</font> <font color="#434f54">=</font> <font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getTime</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">val0</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">A0</font><font color="#000000">)</font><font color="#434f54">,</font> <font color="#000000">700</font><font color="#434f54">,</font> <font color="#000000">200</font><font color="#434f54">,</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">val1</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">A1</font><font color="#000000">)</font><font color="#434f54">,</font> <font color="#000000">700</font><font color="#434f54">,</font> <font color="#000000">200</font><font color="#434f54">,</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
+                    
+    &nbsp;<font color="#000000">avg</font> <font color="#434f54">=</font> <font color="#000000">(</font><font color="#000000">val0</font> <font color="#434f54">+</font> <font color="#000000">val1</font><font color="#000000">)</font> <font color="#434f54">&#47;</font> <font color="#000000">2</font><font color="#000000">;</font>
+                    
+    &nbsp;<font color="#00979c">String</font> <font color="#000000">TimeString</font> <font color="#434f54">=</font> <font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getTimeStr</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#000000">TimeString</font> <font color="#434f54">+=</font> <font color="#005c5f">&#34; &#34;</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">TimeString</font> <font color="#434f54">+=</font> <font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getDateStr</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#000000">TimeString</font> <font color="#434f54">+=</font> <font color="#005c5f">&#34; &#34;</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">TimeString</font><font color="#000000">)</font><font color="#000000">;</font> <b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; | &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">val0</font><font color="#000000">)</font><font color="#000000">;</font> <b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">val1</font><font color="#000000">)</font><font color="#000000">;</font> <b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; | &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">t</font><font color="#434f54">.</font><font color="#d35400">sec</font> <font color="#434f54">==</font> <font color="#000000">00</font> <font color="#434f54">&amp;&amp;</font> <font color="#000000">SDInit</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;Logging&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#d35400">File</font> <font color="#000000">dataFile</font> <font color="#434f54">=</font> <b><font color="#d35400">SD</font></b><font color="#434f54">.</font><font color="#d35400">open</font><font color="#000000">(</font><font color="#005c5f">&#34;datalog.txt&#34;</font><font color="#434f54">,</font> <font color="#00979c">FILE_WRITE</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">dataFile</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">TimeString</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; val0: &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">val0</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; val1: &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">val1</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; avg: &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">close</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;written&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">1000</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">}</font> <font color="#5e6d03">else</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;error opening datalog.txt&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+    &nbsp;<font color="#000000">}</font>
+                    
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#95a5a6">&#47;*t.hour == 10 &amp;&amp; t.min == 11 &amp;&amp; *&#47;</font><font color="#000000">t</font><font color="#434f54">.</font><font color="#d35400">sec</font> <font color="#434f54">==</font> <font color="#000000">30</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34;water &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">water</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font>
+    &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">1000</font><font color="#000000">)</font><font color="#000000">;</font>
+    <font color="#000000">}</font>
+    <font color="#00979c">void</font> <font color="#000000">water</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">avg</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;<font color="#00979c">int</font> <font color="#000000">duration</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#434f54">,</font> <font color="#000000">0</font> <font color="#434f54">,</font> <font color="#000000">100</font> <font color="#434f54">,</font> <font color="#000000">10</font> <font color="#434f54">,</font> <font color="#000000">1</font> <font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">3</font><font color="#434f54">,</font> <font color="#00979c">LOW</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">duration</font> <font color="#434f54">&lt;</font> <font color="#000000">0</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">duration</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34;starting watering, duration = &#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">duration</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">duration</font> <font color="#434f54">*</font> <font color="#000000">1000</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">3</font><font color="#434f54">,</font> <font color="#00979c">HIGH</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;.....done watering&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+    <font color="#000000">}</font>
+    <font color="#00979c">void</font> <font color="#d35400">blink</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">interval</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;<font color="#00979c">unsigned</font> <font color="#00979c">long</font> <font color="#000000">currentMillis</font> <font color="#434f54">=</font> <font color="#d35400">millis</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">currentMillis</font> <font color="#434f54">-</font> <font color="#000000">previousMillis</font> <font color="#434f54">&gt;=</font> <font color="#000000">interval</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">previousMillis</font> <font color="#434f54">=</font> <font color="#000000">currentMillis</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">ledState</font> <font color="#434f54">==</font> <font color="#00979c">LOW</font><font color="#000000">)</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">ledState</font> <font color="#434f54">=</font> <font color="#00979c">HIGH</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">}</font> <font color="#5e6d03">else</font> <font color="#000000">{</font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">ledState</font> <font color="#434f54">=</font> <font color="#00979c">LOW</font><font color="#000000">;</font>
+    &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+    &nbsp;&nbsp;&nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">ledPin</font><font color="#434f54">,</font> <font color="#000000">ledState</font><font color="#000000">)</font><font color="#000000">;</font>
+    &nbsp;<font color="#000000">}</font>
+    <font color="#000000">}</font>
+                    
+    </pre>
+                </div>
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <img src="docs/images/circuit.png" alt="circuit">
+                </div>
+            </div>
+            </p>
+        </div>
+    </div>
+    
+</body>
+
+</html>
