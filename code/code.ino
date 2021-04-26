@@ -9,10 +9,11 @@ Project: Agrosmart
 #include <DS3231.h>
 #include <SPI.h>
 #include <SD.h>
+#define numOfSensors 2
 
 DS3231 rtc(SDA, SCL);
 
-int val0 = 0, val1 = 0, avg = 0;
+int val[numOfSensors];
 Time t;
 
 const int ledPin = 2;
@@ -24,7 +25,9 @@ void setup() {
   Serial.begin(9600);
   rtc.begin();
   pinMode(3, OUTPUT);
+  pinMode(2, OUTPUT);
   digitalWrite(3, HIGH);
+  digitalWrite(2, LOW);
   Serial.println("Setup finished");
   Serial.print("Initializing SD card...");
   if (!SD.begin(4)) {
@@ -46,38 +49,45 @@ void setup() {
 }
 
 void loop() {
+  int sum =0 , avg =0;
   t = rtc.getTime();
-  val0 = map(analogRead(A0), 700, 200, 0, 100);
-  val1 = map(analogRead(A1), 700, 200, 0, 100);
+  val[0] = map(analogRead(A0), 700, 200, 0, 100);
+  val[1] = map(analogRead(A1), 700, 200, 0, 100);
 
-  avg = (val0 + val1) / 2;
+  for(int i=0; i < numOfSensors; i++){
+    sum = sum + val[i];
+  }
+  avg = sum/numOfSensors;
+  
+  String PrintString = rtc.getTimeStr() + String(" ") + rtc.getDateStr();
+  for(int j=0; j<numOfSensors; j++){
+    PrintString += String(" val")+String(j)+String(": ")+String(val[j]);
+  }
+  PrintString += String(" avg:") + String(avg);
 
-  String TimeString = rtc.getTimeStr(); TimeString += " ";
-  TimeString += rtc.getDateStr(); TimeString += " ";
-  Serial.print(TimeString); Serial.print(" | ");
-  Serial.print(val0); Serial.print(" ");
-  Serial.print(val1); Serial.print(" | ");
-  Serial.println(avg);
-  if (t.sec == 00 && SDInit) {
+  Serial.println(PrintString);
+  if (/*t.min == 00 && */t.sec == 00 && SDInit) {
     Serial.println("Logging");
+    digitalWrite(2, HIGH);
     File dataFile = SD.open("datalog.txt", FILE_WRITE);
     if (dataFile) {
-      dataFile.print(TimeString);
-      dataFile.print(" val0: ");
-      dataFile.print(val0);
-      dataFile.print(" val1: ");
-      dataFile.print(val1);
-      dataFile.print(" avg: ");
-      dataFile.println(avg);
+      dataFile.println(PrintString);
       dataFile.close();
       Serial.println("written");
       delay(1000);
+      digitalWrite(2, LOW);
     } else {
       Serial.println("error opening datalog.txt");
+      delay(500);
+      digitalWrite(2, LOW);
+      delay(500);
+      digitalWrite(2, HIGH);
+      delay(500);
+      digitalWrite(2, LOW);
     }
   }
 
-  if (/*t.hour == 10 && t.min == 11 && */t.sec == 30) {
+  if (/*t.hour == 10 && t.min == 00 && */t.sec == 10) {
     Serial.print("water ");
     Serial.println(avg);
     water(avg);
@@ -95,16 +105,4 @@ void water(int avg) {
   delay(duration * 1000);
   digitalWrite(3, HIGH);
   Serial.println(".....done watering");
-}
-void blink(int interval) {
-  unsigned long currentMillis = millis();
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis;
-    if (ledState == LOW) {
-      ledState = HIGH;
-    } else {
-      ledState = LOW;
-    }
-    digitalWrite(ledPin, ledState);
-  }
 }
