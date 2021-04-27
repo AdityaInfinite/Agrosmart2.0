@@ -39,13 +39,18 @@
             <p class="lead">A Data Logging & Automatic Fertilizing System</p>
             <h6>by Aditya Dalvi</h6>
             <br>
-            <p><h4>
-            SmartFarm is a cheap solution to give farmers accurate data of their farm and to automatically fertilise or
-            irrigate the feild with the exact amount of fertiliser or water required by the feild at that time.
-            It does this by receiving data from multiple sensors placed in the feild. This data is used to calculate the
-            precise amount of water/fertiliser required. Then the unit calculates the time for which the pumps must be
-            turned on.
-            Al the information about the feild is also stored in an sd-card.</h4></p>
+            <p>
+            <h4>
+                SmartFarm is a cheap solution to give farmers accurate data of their farm and to automatically fertilise
+                or
+                irrigate the feild with the exact amount of fertiliser or water required by the feild at that time.
+                It does this by receiving data from multiple sensors placed in the feild. This data is used to calculate
+                the
+                precise amount of water/fertiliser required. Then the unit calculates the time for which the pumps must
+                be
+                turned on.
+                Al the information about the feild is also stored in an sd-card.</h4>
+            </p>
         </div>
     </div>
     <div class="alert alert-primary" role="alert">
@@ -70,12 +75,14 @@
     <div class="point solution">
         <h2>The Solution</h2>
         <p>
-            The solution is actively preventing accessive fertilisation. This can only be done if the farmer knows when the fertiliser is enough. It will also be convinient if the whole process is automated. <br>
+            The solution is actively preventing accessive fertilisation. This can only be done if the farmer knows when
+            the fertiliser is enough. It will also be convinient if the whole process is automated. <br>
             So I made SmartFarm, it collects farm data and uses this data to fertilise or irrigate the feild. <br>
-            The data collected can be used to monitor soil health, and to study the relation between fertiliser levels and crop quality. Using this data the farmer can decide the perfect amount of fertilizer for his feild.
+            The data collected can be used to monitor soil health, and to study the relation between fertiliser levels
+            and crop quality. Using this data the farmer can decide the perfect amount of fertilizer for his feild.
         </p>
         <p>
-            The same solution with some changes can be used also to control pesticides in grain silos, 
+            The same solution with some changes can be used also to control pesticides in grain silos,
         </p>
     </div>
     <div class="making jumbotron jumbotron-fluid">
@@ -84,19 +91,20 @@
             <p>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-item nav-link active border border-dark" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                        aria-controls="nav-home" aria-selected="true">Home</a>
-                    <a class="nav-item nav-link border border-dark" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                        aria-controls="nav-profile" aria-selected="false"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="20" height="20" fill="currentColor" class="bi bi-file-code" viewBox="0 0 16 16">
+                    <a class="nav-item nav-link active border border-dark" id="nav-home-tab" data-toggle="tab"
+                        href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                    <a class="nav-item nav-link border border-dark" id="nav-profile-tab" data-toggle="tab"
+                        href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-file-code" viewBox="0 0 16 16">
                             <path
                                 d="M6.646 5.646a.5.5 0 1 1 .708.708L5.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0a.5.5 0 1 0-.708.708L10.293 8 8.646 9.646a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2z" />
                             <path
                                 d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
                         </svg>
                         click here for Code</a>
-                    <a class="nav-item nav-link border border-dark" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-                        aria-controls="nav-contact" aria-selected="false">
+                    <a class="nav-item nav-link border border-dark" id="nav-contact-tab" data-toggle="tab"
+                        href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-diagram-2-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -109,20 +117,27 @@
                 style="background-color: white; padding-left: 20px; padding-bottom: 20px;">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <p style="padding-top: 10px;">
-                        
+                        I decided to use my knowledge of Ardunio and electronics to build a smart irrigation system.
+                        Arduino is a programmable microcontroller whose program is written on a computer using Arduino
+                        IDE(Integration development environment) in C++ language. Once the program is uploaded onto the
+                        Arduino, it does not need a computer and it can be connected to a battery for power.
+                    </p>
+                    <h4>Check <a href="https://docs.google.com/document/d/1bAe-KEHbb0lvszVdnFWmgoY1UizvlsOIOMb-iF07-3s/edit?usp=sharing"
+                        target="_blank">Google docs file </a> for paragraphs on different activities performed by the unit</h4>
+                    <p style="padding-top: 10px;">
                         The unit uses an Adruino based on atmega328p (microcontroller) as its brains and control center.
                         <br>Multiple sensors are placed in the soil in a grid pattern, these sensors send analog signals
                         to the arduino.
                         <br>The arduino receives these signals, converts them into percentages and then stores them in
                         an array as integers
-<pre>
+                    <pre>
     &nbsp;<font color="#000000">val</font><font color="#000000">[</font><font color="#000000">0</font><font color="#000000">]</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">A0</font><font color="#000000">)</font><font color="#434f54">,</font> <font color="#000000">700</font><font color="#434f54">,</font> <font color="#000000">200</font><font color="#434f54">,</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
     &nbsp;<font color="#000000">val</font><font color="#000000">[</font><font color="#000000">1</font><font color="#000000">]</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">A1</font><font color="#000000">)</font><font color="#434f54">,</font> <font color="#000000">700</font><font color="#434f54">,</font> <font color="#000000">200</font><font color="#434f54">,</font> <font color="#000000">0</font><font color="#434f54">,</font> <font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
 </pre>
-                        The sensors return a value ranging from 200-700 they are converted to between 0-100. <br>
-                        These values are written down along with the date and time in a file inside a sd card. The date
-                        and time is taken from an Real-Time-Clock Module DS3231.<br>
-<pre>
+                    The sensors return a value ranging from 200-700 they are converted to between 0-100. <br>
+                    These values are written down along with the date and time in a file inside a sd card. The date
+                    and time is taken from an Real-Time-Clock Module DS3231.<br>
+                    <pre>
     &nbsp;<font color="#00979c">String</font> <font color="#000000">PrintString</font> <font color="#434f54">=</font> <font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getTimeStr</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#434f54">+</font> <font color="#00979c">String</font><font color="#000000">(</font><font color="#005c5f">&#34; &#34;</font><font color="#000000">)</font> <font color="#434f54">+</font> <font color="#000000">rtc</font><font color="#434f54">.</font><font color="#d35400">getDateStr</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
     &nbsp;<font color="#5e6d03">for</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">j</font><font color="#434f54">=</font><font color="#000000">0</font><font color="#000000">;</font> <font color="#000000">j</font><font color="#434f54">&lt;</font><font color="#000000">numOfSensors</font><font color="#000000">;</font> <font color="#000000">j</font><font color="#434f54">++</font><font color="#000000">)</font><font color="#000000">{</font>
     &nbsp;&nbsp;&nbsp;<font color="#000000">PrintString</font> <font color="#434f54">+=</font> <font color="#00979c">String</font><font color="#000000">(</font><font color="#005c5f">&#34; val&#34;</font><font color="#000000">)</font><font color="#434f54">+</font><font color="#00979c">String</font><font color="#000000">(</font><font color="#000000">j</font><font color="#000000">)</font><font color="#434f54">+</font><font color="#00979c">String</font><font color="#000000">(</font><font color="#005c5f">&#34;: &#34;</font><font color="#000000">)</font><font color="#434f54">+</font><font color="#00979c">String</font><font color="#000000">(</font><font color="#000000">val</font><font color="#000000">[</font><font color="#000000">j</font><font color="#000000">]</font><font color="#000000">)</font><font color="#000000">;</font>
@@ -132,16 +147,16 @@
     &nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#000000">PrintString</font><font color="#000000">)</font><font color="#000000">;</font>
     &nbsp;<font color="#000000">dataFile</font><font color="#434f54">.</font><font color="#d35400">close</font><font color="#000000">(</font><font color="#000000">)</font><font color="#000000">;</font>
 </pre>
-                        Every day at a certain time the water function is activated.
-<pre>
+                    Every day at a certain time the water function is activated.
+                    <pre>
     &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">t</font><font color="#434f54">.</font><font color="#d35400">hour</font> <font color="#434f54">==</font> <font color="#000000">10</font> <font color="#434f54">&amp;&amp;</font> <font color="#000000">t</font><font color="#434f54">.</font><font color="#d35400">min</font> <font color="#434f54">==</font> <font color="#000000">00</font> <font color="#434f54">&amp;&amp;</font> <font color="#000000">t</font><font color="#434f54">.</font><font color="#d35400">sec</font> <font color="#434f54">==</font> <font color="#000000">10</font><font color="#000000">)</font> <font color="#000000">{</font>
     &nbsp;&nbsp;&nbsp;<font color="#000000">water</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#000000">)</font><font color="#000000">;</font>
     &nbsp;<font color="#000000">}</font>  
 </pre> The water function uses the sensor
-                        values to calculate the time for which the pump should be turned on.<br>
-                        So if the soil moisture is equal to upper limit (100 for example) then the pump is turned on for
-                        0s <br>
-<pre>
+                    values to calculate the time for which the pump should be turned on.<br>
+                    So if the soil moisture is equal to upper limit (100 for example) then the pump is turned on for
+                    0s <br>
+                    <pre>
     <font color="#00979c">void</font> <font color="#000000">water</font><font color="#000000">(</font><font color="#00979c">int</font> <font color="#000000">avg</font><font color="#000000">)</font> <font color="#000000">{</font>
      &nbsp;<font color="#00979c">int</font> <font color="#000000">duration</font> <font color="#434f54">=</font> <font color="#d35400">map</font><font color="#000000">(</font><font color="#000000">avg</font><font color="#434f54">,</font> <font color="#000000">0</font> <font color="#434f54">,</font> <font color="#000000">100</font> <font color="#434f54">,</font> <font color="#000000">10</font> <font color="#434f54">,</font> <font color="#000000">1</font> <font color="#000000">)</font><font color="#000000">;</font>
      &nbsp;<font color="#d35400">digitalWrite</font><font color="#000000">(</font><font color="#000000">3</font><font color="#434f54">,</font> <font color="#00979c">LOW</font><font color="#000000">)</font><font color="#000000">;</font>
@@ -155,10 +170,10 @@
      &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;.....done watering&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
     <font color="#000000">}</font>
 </pre>
-                        To start the pump, the arduino activates a relay which inturn turns the pump on <br>
-                        The arduino waits for the calculated time then it de activates the relay resulting in the pump
-                        turning off.
-                        <br><br>
+                    To start the pump, the arduino activates a relay which inturn turns the pump on <br>
+                    The arduino waits for the calculated time then it de activates the relay resulting in the pump
+                    turning off.
+                    <br><br>
                     <h6>See Code tab for code and Schematics tab for circuit</h6>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -170,7 +185,7 @@
                                 d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                         </svg>
                     </a>
-<pre>
+                    <pre>
     <font color="#95a5a6">&#47;*</font>
     <font color="#95a5a6">Author: Aditya Dalvi</font>
     <font color="#95a5a6">Date:24&#47;2&#47;2021</font>
